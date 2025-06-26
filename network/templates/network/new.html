@@ -1,0 +1,28 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'network/new.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2>New Post</h2>
+    
+    {% if message %}
+    <div class="alert alert-success alert-dismissible fade show rounded-4" role="alert" data-bs-theme="dark">
+        <h4 class="alert-heading">Success!</h4>
+        Successfully created post.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <textarea id="new-text" name="text" class="form-control rounded-4 shadow-sm" placeholder="Enter text..." rows="4" data-bs-theme="dark" maxlength="500"></textarea>
+        <button id="new-submit" type="submit" class="btn shadow-sm rounded-4">Publish Post</button>
+    </form>
+</div>
+
+{% endblock %}

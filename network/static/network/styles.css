@@ -1,0 +1,113 @@
+* {
+    font-family: 'Inter', sans-serif;
+    color-scheme: dark;
+}
+
+.navbar {
+    background-color: #007CC7;
+}
+
+
+.btn {
+    background-color: #007CC7;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #005d96;
+    color: white;
+}
+
+.follow-btn {
+    margin-left: 10px;
+}
+
+body {
+    background-color: #203647;
+    color: white;
+}
+
+h2 {
+    margin: 10px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #4DA8DA;
+}
+
+.alert {
+    font-weight: 700;
+    animation-name: alert;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+@keyframes alert {
+    0% {
+        margin-top: -20px;
+        opacity: 0%;
+    }
+    30% {
+        opacity: 100%;
+        margin-top: 30px;
+    }
+    100% {
+        opacity: 100%;
+        margin-top: 10px;
+    }
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.info {
+    font-weight: 400;
+    color: grey;
+}
+
+.like {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.unlike {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--bs-danger);
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+}
+
+.fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+.outline {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+.profile-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+.follow ,.unfollow {
+    margin-bottom: 10px;
+}

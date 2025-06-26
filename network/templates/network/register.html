@@ -1,0 +1,35 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h2>Register</h2>
+
+    {% if message %}
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm rounded-4" role="alert" data-bs-theme="dark">
+            Wrong Username or password! Please try again.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endif %}
+
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input class="form-control rounded-4 shadow-sm" type="text" name="username" placeholder="Username" data-bs-theme="dark">
+        </div>
+        <div class="form-group">
+            <input class="form-control rounded-4 shadow-sm" type="email" name="email" placeholder="Email Address" data-bs-theme="dark">
+        </div>
+        <div class="form-group">
+            <input class="form-control rounded-4 shadow-sm" type="password" name="password" placeholder="Password" data-bs-theme="dark">
+        </div>
+        <div class="form-group">
+            <input class="form-control rounded-4 shadow-sm" type="password" name="confirmation" placeholder="Confirm Password" data-bs-theme="dark">
+        </div>
+        <input class="btn rounded-4 shadow-sm" type="submit" value="Register">
+    </form>
+
+    Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+</div>
+
+{% endblock %}

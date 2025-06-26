@@ -1,0 +1,82 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %}
+  <script src="{% static 'network/posts.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div id="all-posts">
+  <div data-bs-theme="dark" class="container">
+    <h2 id="posts-title">All Posts</h2>
+    <div id="posts-list"></div>
+  </div>
+  <nav data-bs-theme="dark" class="container" id="posts-navigation">
+    <ul class="pagination">
+      <li class="page-item" id="posts-previous">
+        <button class="page-link page-changer">
+          <span class="material-symbols-outlined inline-icon">
+            arrow_back
+            </span>
+          Previous</button>
+      </li>
+      <li class="page-item" id="posts-next">
+        <button class="page-link page-changer">Next
+          <span class="material-symbols-outlined inline-icon">
+            arrow_forward
+            </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div id="profile-page" class="container" data-bs-theme="dark">
+  <div id="profile-title"></div>
+  <div id="follow-unfollow"></div>
+  <div id="profile-posts"></div>
+  <nav data-bs-theme="dark" class="container" id="profile-navigation">
+    <ul class="pagination">
+      <li class="page-item" id="profile-previous">
+        <button class="page-link page-changer">
+          <span class="material-symbols-outlined inline-icon">
+            arrow_back
+            </span>
+          Previous</button>
+      </li>
+      <li class="page-item" id="profile-next">
+        <button class="page-link page-changer">Next
+          <span class="material-symbols-outlined inline-icon">
+            arrow_forward
+            </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div id="following-page" class="container" data-bs-theme="dark">
+  <div id="following-title"></div>
+  <div id="following-unfollow"></div>
+  <div id="following-posts"></div>
+  <nav data-bs-theme="dark" class="container" id="following-navigation">
+    <ul class="pagination">
+      <li class="page-item" id="following-previous">
+        <button class="page-link page-changer">
+          <span class="material-symbols-outlined inline-icon">
+            arrow_back
+            </span>
+          Previous</button>
+      </li>
+      <li class="page-item" id="following-next">
+        <button class="page-link page-changer">Next
+          <span class="material-symbols-outlined inline-icon">
+            arrow_forward
+            </span>
+        </button>
+      </li>
+    </ul>
+  </nav> 
+</div>
+{% endblock %}
